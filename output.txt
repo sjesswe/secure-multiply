@@ -1,0 +1,27 @@
+Flawfinder data output
+
+cybernet@cybernet:~/Documents/example/build$ flawfinder multiplier.o 
+Flawfinder version 1.31, (C) 2001-2014 David A. Wheeler.
+Number of rules (primarily dangerous function names) in C/C++ ruleset: 169
+Examining multiplier.o
+
+FINAL RESULTS:
+
+multiplier.o:5:  [4] (format) printf:
+  If format strings can be influenced by an attacker, they can be exploited
+  (CWE-134). Use a constant for the format specification.
+
+ANALYSIS SUMMARY:
+
+Hits = 1
+Lines analyzed = 29 in approximately 0.02 seconds (1481 lines/second)
+Physical Source Lines of Code (SLOC) = 29
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   1 [5]   0
+Hits@level+ = [0+]   1 [1+]   1 [2+]   1 [3+]   1 [4+]   1 [5+]   0
+Hits/KSLOC@level+ = [0+] 34.4828 [1+] 34.4828 [2+] 34.4828 [3+] 34.4828 [4+] 34.4828 [5+]   0
+Minimum risk level = 1
+Not every hit is necessarily a security vulnerability.
+There may be other security vulnerabilities; review your code!
+See 'Secure Programming for Linux and Unix HOWTO'
+(http://www.dwheeler.com/secure-programs) for more information.
+
